@@ -17,7 +17,10 @@ summary(dataset)
 #I'll first visualize the variables by themselves to determine patterns
 
 ggplot(dataset, aes(x=carat)) +
-  geom_histogram(color = "black", fill = 'gold')
+  geom_histogram(color = "black", fill = 'gold') +
+  labs(title = "Distribution of Carat Weights",
+       x = "Carat Weight",
+       y = "Count")
 
 #Using a simple histogram we can determine that the graph is skewed right
 #which indicates that most mispriced diamonds are generally on the lower end in carats
@@ -25,7 +28,10 @@ ggplot(dataset, aes(x=carat)) +
 #are around 0.25-1 carats.
 
 ggplot(dataset, aes(x=clarity)) +
-  geom_bar(color = "black", fill = 'green')
+  geom_bar(color = "black", fill = 'green') +
+  labs(title = "Distribution of Clarity Types",
+       x = "Clarity Types",
+       y = "Count")
 
 #Using a bar graph we can check the patterns of the clarity variable
 #The graph appears to be somewhat symmetric which tells us that
@@ -33,7 +39,10 @@ ggplot(dataset, aes(x=clarity)) +
 #However, less of these diamonds are I1 compared to VVS2.
 
 ggplot(dataset, aes(x=price)) +
-  geom_histogram(color = "black", fill = 'darkgreen')
+  geom_histogram(color = "black", fill = 'darkgreen') +
+  labs(title = "Distribution of Price",
+       x = "Price",
+       y = "Count")
 
 summary(dataset$price)
 
@@ -48,7 +57,10 @@ summary(dataset$price)
 #how the price varies based on carat weight draw conclusions from that.
 
 ggplot(dataset, aes(x = carat, y = price)) +
-  geom_point()
+  geom_point() +
+  labs(title = "Carat vs Price",
+       x = "Carat",
+       y = "Price")
 
   
 #We can see based off this graph that there is some form of correlation
