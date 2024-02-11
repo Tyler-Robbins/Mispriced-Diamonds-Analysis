@@ -10,7 +10,7 @@ summary(dataset)
 
 
 #Based off a simply viewing of the variables we can determine that
-#the carat and price varaibles are quantitative while the clarity is
+#the carat and price variables are quantitative while the clarity is
 #qualitative which help determine the type of visualizations we can make
 
 
@@ -22,6 +22,7 @@ ggplot(dataset, aes(x=carat)) +
        x = "Carat Weight",
        y = "Count")
 
+
 #Using a simple histogram we can determine that the graph is skewed right
 #which indicates that most mispriced diamonds are generally on the lower end in carats
 #while rarely span above 2 carats. Majority of carats that are mispriced 
@@ -32,6 +33,7 @@ ggplot(dataset, aes(x=clarity)) +
   labs(title = "Distribution of Clarity Types",
        x = "Clarity Types",
        y = "Count")
+
 
 #Using a bar graph we can check the patterns of the clarity variable
 #The graph appears to be somewhat symmetric which tells us that
@@ -70,3 +72,15 @@ ggplot(dataset, aes(x = carat, y = price)) +
 #dramatic increase starting at exactly 1 carat where there is a large
 # price increase for the same carat weight diamond this also occurs
 # at around ~1.5 carats as well as at 2 carats.
+
+#Here I will try to find out the cause of these weird increases.
+
+
+
+ggplot(dataset, aes(x = carat, y = price, color = clarity)) +
+  geom_point(alpha = 0.5, position = "identity") +
+  labs(title = "Carat vs Price vs Clarity",
+       x = "Carat",
+       y = "Price")
+  
+  
