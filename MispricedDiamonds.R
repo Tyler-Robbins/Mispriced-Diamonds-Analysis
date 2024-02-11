@@ -77,10 +77,15 @@ ggplot(dataset, aes(x = carat, y = price)) +
 
 
 
-ggplot(dataset, aes(x = carat, y = price, color = clarity)) +
+plot <- ggplot(dataset, aes(x = carat, y = price, color = clarity)) +
   geom_point(alpha = 0.5, position = "identity") +
   labs(title = "Carat vs Price vs Clarity",
        x = "Carat",
-       y = "Price")
-  
+       y = "Price") +
+  scale_color_manual(values = c("#c3f460", "#a9da45", "#8fc029", "#75a600", "#5c8e00", "#437600", "#2a5e00", "#255400"))
+plot
+#Adding Regression lines to see abnormalities
+
+plot + geom_smooth(method = "lm", se = FALSE)
+
   
