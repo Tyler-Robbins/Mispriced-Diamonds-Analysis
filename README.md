@@ -36,4 +36,10 @@ which can represent their own patterns for us to analyze.</p>
 <p>In this scatterplot we can see a huge amount of points each representing the price and carat weight of these diamonds. There is a clear positive trend with the data and most of the data seems to be strongly together at least at the very begninning of the graph. However, for some reason there appears to be multiple vertical lines of data at certain carat weights that go straight up which is odd considering that while it makes sense for there to be different prices for a specific carat weight these prices are at an extremely high price for that specific carat.</p>
 
 <h3>Diving Deeper</h3>
-<o>As shown before the scatterplot while slightly normal looking still had a weird amount of data that had abnormal prices for their weight in carat so from here I will try to find these odd trends, illuminate where they are and what they mean and then determine if these are the reason for a lot of diamonds being mispriced.</o>
+<p>As shown before the scatterplot while slightly normal looking still had a weird amount of data that had abnormal prices for their weight in carat so from here I will try to find these odd trends, illuminate where they are and what they mean and then determine if these are the reason for a lot of diamonds being mispriced.</p>
+<img src="https://raw.githubusercontent.com/Tyler-Robbins/Mispriced-Diamonds-Analysis/main/image6.1.png">
+
+<p>The graph is now colored as well as the transparency of each point is altered to see the patterns especially the clarity types of the diamonds. Each clarity grouping is now being depicted by different colors to see each diamonds clarity based off of color. Now at the different carat weights we can finally see the issue with the diamonds causing them to be mispriced. The ligher colored dots are references to the clarity groups "I1", "IF", and "SI1" which are also the clarity groups that would typically sell for a lower value due to them having more inclusions within the diamonds making them worth less. For each of the price spiked diamonds the most common factor is that these three groups are commonly at the top of these spikes when in reality they should not be as they are normally worth less than other clarity types like "VVS2". </p>
+
+<h2>Summary</h2>
+<p>To be Added</p>
